@@ -2,6 +2,9 @@ cmake_minimum_required(VERSION 3.16)
 
 project(TerrainGen VERSION 0.1.0 LANGUAGES CXX)
 
+# Generate compile_commands.json for clangd and other tooling.
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 # Header-only terrain generation library.
 add_library(TerrainGen INTERFACE)
 add_library(TerrainGen::TerrainGen ALIAS TerrainGen)
